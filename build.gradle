@@ -22,8 +22,9 @@ repositories {
 }
 
 ext {
-    mapstructVersion = "1.5.5.Final"
-    lombokMapstructBindingVersion = "0.2.0"
+    mapstructVersion = '1.5.5.Final'
+    lombokMapstructBindingVersion = '0.2.0'
+    mongockVersion = '5.4.2'
 }
 
 compileJava {
@@ -43,8 +44,8 @@ dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    implementation 'io.mongock:mongock-springboot-v3:5.4.2'
-    implementation 'io.mongock:mongodb-springdata-v4-driver:5.4.2'
+    implementation 'io.mongock:mongock-springboot-v3:${mongockVersion}'
+    implementation 'io.mongock:mongodb-springdata-v4-driver:'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
