@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping(ProductController.PATH)
 @RequiredArgsConstructor
 public class ProductController {
+
+  public static final String PATH = "/products";
 
   private final ProductService productService;
 
