@@ -2,7 +2,7 @@
 
 ## Business Context
 
-![Context Diagram](./img/Context.drawio.png)
+![Context Diagram](img/Context.drawio.png)
 
 **\<optionally: Explanation of external domain interfaces>**
 
