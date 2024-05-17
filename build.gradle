@@ -44,8 +44,8 @@ dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    implementation 'io.mongock:mongock-springboot-v3:${mongockVersion}'
-    implementation 'io.mongock:mongodb-springdata-v4-driver:'
+    implementation "io.mongock:mongock-springboot-v3:${mongockVersion}"
+    implementation "io.mongock:mongodb-springdata-v4-driver:${mongockVersion}"
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
