@@ -1,4 +1,4 @@
-package ch.coeb.shop.controller;
+package ch.coeb.shop.controller.rest;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

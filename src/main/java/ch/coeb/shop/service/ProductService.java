@@ -17,4 +17,9 @@ public class ProductService {
     return productRepository.findAll(pageable);
   }
 
+  public Product loadProductById(String id) {
+    return productRepository.findById(id)
+        .orElse(null);
+  }
+
 }

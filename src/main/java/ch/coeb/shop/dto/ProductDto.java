@@ -9,6 +9,8 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 public class ProductDto {
 
+  String id;
+
   String name;
 
 }

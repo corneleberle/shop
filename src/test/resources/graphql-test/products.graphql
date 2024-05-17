@@ -1,0 +1,6 @@
+query products {
+    products(pageNumber: 0, pageSize: 2) {
+        id
+        name
+    }
+}

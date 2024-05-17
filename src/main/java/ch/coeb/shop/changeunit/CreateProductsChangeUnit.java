@@ -24,6 +24,10 @@ public class CreateProductsChangeUnit {
         Product.builder()
             .id("product2")
             .name("OnePlus Nord 2")
+            .build(),
+        Product.builder()
+            .id("product3")
+            .name("Garmin Fenix")
             .build()
     ));
   }
@@ -31,4 +35,5 @@ public class CreateProductsChangeUnit {
   @RollbackExecution
   public void rollback() {
   }
+
 }

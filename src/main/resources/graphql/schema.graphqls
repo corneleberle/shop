@@ -1,0 +1,9 @@
+type Query {
+    products(pageNumber: Int, pageSize: Int): [Product]
+    productById(id: ID): Product
+}
+
+type Product {
+    id: ID
+    name: String
+}

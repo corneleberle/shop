@@ -1,4 +1,4 @@
-package ch.coeb.shop.controller;
+package ch.coeb.shop.controller.rest;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -22,7 +22,7 @@ import org.springframework.http.HttpMethod;
     classes = TestShopApplication.class,
     webEnvironment = WebEnvironment.RANDOM_PORT
 )
-class ProductControllerTest {
+class RestProductControllerTest {
 
   @LocalServerPort
   private int port;
@@ -31,22 +31,22 @@ class ProductControllerTest {
   private TestRestTemplate restTemplate;
 
   @Test
-  void greetingShouldReturnDefaultMessage() {
+  void products() {
     // Given
 
     // When
     Page<ProductDto> result = this.restTemplate.exchange(
-        "http://localhost:" + port + ProductController.PATH,
+        "http://localhost:" + port + RestProductController.PATH,
         HttpMethod.GET,
         null,
         new ParameterizedTypeReference<ResponsePage<ProductDto>>() {
         }).getBody();
 
     // Then
-    assertThat(result, hasProperty("totalElements", is(2L)));
     assertThat(result, hasProperty("content", containsInAnyOrder(
         hasProperty(Fields.name, is("MacBook Pro")),
-        hasProperty(Fields.name, is("OnePlus Nord 2"))
+        hasProperty(Fields.name, is("OnePlus Nord 2")),
+        hasProperty(Fields.name, is("Garmin Fenix"))
     )));
   }
 

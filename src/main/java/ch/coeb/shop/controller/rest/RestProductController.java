@@ -1,4 +1,4 @@
-package ch.coeb.shop.controller;
+package ch.coeb.shop.controller.rest;
 
 import ch.coeb.shop.converter.ProductConverter;
 import ch.coeb.shop.dto.ProductDto;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(ProductController.PATH)
+@RequestMapping(RestProductController.PATH)
 @RequiredArgsConstructor
-public class ProductController {
+public class RestProductController {
 
-  public static final String PATH = "/products";
+  public static final String PATH = "/rest/products";
 
   private final ProductService productService;
 
